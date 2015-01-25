@@ -13,8 +13,12 @@ angular.module('ih9App')
       if($scope.newMaterial === '') {
         return;
       }
-      $http.post('/api/material', { name: $scope.newMaterial });
+      $http.post('/api/material', { name: $scope.newMaterial,status:0,info:$scope.newInfo + 'demo' });
       $scope.newMaterial = '';
+    };
+
+    $scope.updateMaterial = function(material) {
+      $http.put('/api/material/'+ material._id, { status: material.status +1 });
     };
 
     $scope.deleteMaterial = function(material) {

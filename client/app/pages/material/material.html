@@ -16,7 +16,9 @@
         <div class="panel-heading">
           <div class="panel-title panel-info"><h4 >{{material.name}}</h4></div>
           </div>
-        <div class="panel-body " ng-class='{"status-0":(material.status==0),"status-1":(material.status==1),"status-2":(material.status==2),"status-3":(material.status==3),"status-4":(material.status==4),}'>{{material.info}} status {{material.status}}<button type="button" class="close" ng-click="deleteMaterial(material)">&times;</button></div>
+        <div class="panel-body "
+        ng-class='{"status-5":(material.status==5),"status-0":(material.status==0),"status-1":(material.status==1),"status-2":(material.status==2),"status-3":(material.status==3),"status-4":(material.status==4),}'>
+        {{material.info}} status {{material.status}}<button type="button" class="close" ng-click="deleteMaterial(material)">&times;</button><button type="button" class="btn btn-info" ng-click="updateMaterial(material)">next</button></div>
       </div>
     </div>
   </div>
@@ -25,8 +27,9 @@
     <label>Syncs in realtime across clients new Materials</label>
     <p class="input-group">
       <input type="text" class="form-control" placeholder="Add a new material here." ng-model="newMaterial">
+      <input type="text" class="form-control" placeholder="info" ng-model="newInfo">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addMaterial()">Add New</button>
+        <button type="submit" class="btn btn-primary" ng-click="addMaterial()">New Material</button>
       </span>
     </p>
   </form>
@@ -34,8 +37,8 @@
 
 <footer class="footer">
   <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+      <p>Plant Maintenance Responsive with Angular ' UX CoE |
+        <a href="https://www.xing.com/profile/Steffen_Wolf7">steffen@xing</a> |
+         <a href="https://github.com/gittel/hi9/tree/ih9y3">ih9@github</a></p>
   </div>
 </footer>
