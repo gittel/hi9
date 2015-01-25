@@ -16,7 +16,9 @@
         <div class="panel-heading">
           <div class="panel-title panel-info"><h4 >{{meldung.name}}</h4></div>
           </div>
-        <div class="panel-body">{{meldung.info}}</div>
+        <div class="panel-body">{{meldung.info}}
+          <button type="button" class="close" ng-click="deleteMeldung(meldung)">&times;</button>
+        </div>
       </div>
     </div>
   </div>
