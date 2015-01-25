@@ -18,8 +18,15 @@ angular.module('ih9App')
     };
 
     $scope.updateMaterial = function(material) {
-      $http.put('/api/material/'+ material._id, { status: material.status +1 });
+      $http.put('/api/material/'+ material._id, { status: material.status, info:material.info });
     };
+
+    $scope.nextStatus = function(material) {
+      if (material.status<7){
+      $http.put('/api/material/'+ material._id, { status: material.status +1 });
+    } else return;
+    };
+
 
     $scope.deleteMaterial = function(material) {
       $http.delete('/api/material/' + material._id);
