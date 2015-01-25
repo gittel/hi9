@@ -7,4 +7,6 @@ angular.module('ih9App')
         templateUrl: 'app/pages/meldung/meldung.html',
         controller: 'MeldungCtrl'
       });
-  });
+  })
+
+;
